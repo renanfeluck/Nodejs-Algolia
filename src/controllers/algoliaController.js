@@ -25,7 +25,7 @@ module.exports = {
             .then(() => {
               console.log('Finished! We got %d hits', hits.length);
               fs.writeFile(
-                `${indexName}.json`,
+                `output/${indexName}.json`,
                 JSON.stringify(hits, null, 2),
                 'utf-8',
                 (err) => {
@@ -35,7 +35,7 @@ module.exports = {
                 );
                 res.status(200).send({
                     message: `Finished! We got ${hits.length} hits`,
-                    file: `Output file: ${indexName}.json`})
+                    file: `Output file: output/${indexName}.json`})
                 resolve({
                     status: 200,
                     message: `Finished! We got ${hits.length} hits`
