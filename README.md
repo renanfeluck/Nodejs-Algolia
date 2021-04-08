@@ -1,27 +1,29 @@
 # Nodejs-Algolia
 # Develop by Renan Felipe Luckow
 
-Run the project:    
-  -npm install  
-  -npm start  
+# Run the project:    
+` npm install `
+
+  `npm start` 
   
-  Project will run at: "http://localhost:3001"
+  - Project will run at: "http://localhost:3001"
   
- ROUTES:     
+#  ROUTES:     
       
-   ---Export:   
+##    -Export:   
     
     Route: /algolia/export?applicationId=____&apiKey=_____&indexName=______
     Body:
     {
       "options": {
-        "attributesToRetrieve": [
-                    "objectID"
-                  ]
+        "attributesToRetrieve": ["objectID"],
+        "facetFilters": ["attribute_to_filter:true"]
       }
     }
- in Options all algolia options can be used: https://www.algolia.com/doc/api-reference/api-methods/browse/#retrieve-only-certain-attributes-when-browsing
+ 
+>  in Options all algolia options can be used: https://www.algolia.com/doc/api-reference/api-methods/browse/#retrieve-only-certain-attributes-when-browsing
     
     
- Output: Export the index informations to a .json file
+##  Output:
+ Export the index informations to a .json file
     
